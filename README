@@ -1,6 +1,7 @@
 Rally Software Development Coding Exercise
 Author: Daniel Burton
 
+Problem:
 ------------
 -Exercise 4-
 ------------
@@ -34,3 +35,9 @@ Will have a subsequent generation of:
 0 1 1 0 0
 0 1 1 0 0
 0 1 1 0 0
+
+Solution:
+
+I chose to solve this problem in Java.  CalculateNextGeneration takes the
+initial board as input from the standard input and prints the next generation
+to the standard output.

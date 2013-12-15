@@ -83,7 +83,7 @@ public class Board {
 	/**
 	 * Calculate the next generation
 	 * 
-	 * @return A new board
+	 * @return A board for the next generation
 	 */
 	public Board calculateNextGeneration() {
 		Board nextGeneration = new Board();
@@ -135,6 +135,13 @@ public class Board {
 		return isAlive.get(row).get(column);
 	}
 
+	/**
+	 * Calculate the number of neighbors of a cell
+	 * 
+	 * @param row
+	 * @param column
+	 * @return The number of neighbors
+	 */
 	public int numberOfNeighbors(int row, int column) {
 		int count = 0;
 		
@@ -151,11 +158,11 @@ public class Board {
 	}
 
 	/**
-	 * True if the position (row,column) is within the bounds of the board
+	 * Test if the position (row,column) is within the bounds of the board
 	 * 
 	 * @param row
 	 * @param column
-	 * @return
+	 * @return True if within bounds 
 	 */
 	public boolean withinBounds(int row, int column) {
 		if (row < 0 || row >= isAlive.size()) {
@@ -200,10 +207,21 @@ public class Board {
 		}
 	}
 
+	/**
+	 * Returns the number of rows in the board
+	 * 
+	 * @return
+	 */
 	public int numberOfRows() {
 		return isAlive.size();
 	}
 
+	/**
+	 * Returns the number of columns in a row
+	 * 
+	 * @param row
+	 * @return
+	 */
 	public int rowSize(int row) {
 		return isAlive.get(row).size();
 	}
